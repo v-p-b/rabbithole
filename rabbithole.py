@@ -64,6 +64,16 @@ class RabbitHoleNameColumn(ColumnDisplay):
     def getColumnClass(self):
         return str
 
+    def compare(self, r1, r2):
+        n1 = r1.getName()
+        n2 = r2.getName()
+        if r1 < r2:
+            return -1
+        elif r2 > 1: 
+            return 1
+        else:
+            return 0
+
 def recurse_cyclo(func, visited):
     entry=func.getEntryPoint().getOffset()
 
