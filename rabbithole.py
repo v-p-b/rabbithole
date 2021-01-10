@@ -67,9 +67,9 @@ class RabbitHoleNameColumn(ColumnDisplay):
     def compare(self, r1, r2):
         n1 = r1.getName()
         n2 = r2.getName()
-        if r1 < r2:
+        if n1 < n2:
             return -1
-        elif r2 > 1: 
+        elif n2 > n1: 
             return 1
         else:
             return 0
