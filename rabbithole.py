@@ -52,7 +52,7 @@ class RabbitHoleCCColumn(ColumnDisplay):
     def compare(self, r1, r2):
         c1 = r1.getCycloComplexity()
         c2 = r2.getCycloComplexity()
-        return r1-r2
+        return c1-c2
 
 class RabbitHoleNameColumn(ColumnDisplay):
     def getColumnValue(self,rowObj):
