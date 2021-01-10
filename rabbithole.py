@@ -64,7 +64,7 @@ class RabbitHoleNameColumn(ColumnDisplay):
     def getColumnClass(self):
         return str
 
-def recurse_cyclo(func, visited = set()):
+def recurse_cyclo(func, visited):
     entry=func.getEntryPoint().getOffset()
 
     # Avoid loops
@@ -97,7 +97,7 @@ tableDialog.addCustomColumn(RabbitHoleNameColumn())
 tableDialog.addCustomColumn(RabbitHoleCCColumn())
 
 while func is not None:
-    cc = recurse_cyclo(func)
+    cc = recurse_cyclo(func,set())
     CCs.append(cc)
     print("%s\t%d" % (func.getName(), cc))
     tableDialog.add(RabbitHoleRow(func, cc))
