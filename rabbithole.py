@@ -45,6 +45,7 @@ if userDialog == 0:
 while func is not None:
     cc = recurse_cyclo(func)
     CCs.append(cc)
+    print("%s\t%d" % (func.getName(), cc))
     if userDialog == 1:
         func.setName("%s_cc%d" % (func.getName(), cc), SourceType.USER_DEFINED)
     func=getFunctionAfter(func)
