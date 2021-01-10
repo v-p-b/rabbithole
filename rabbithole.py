@@ -8,9 +8,10 @@
 from ghidra.program.util import CyclomaticComplexity
 from ghidra.util.task import TaskMonitor
 from ghidra.program.model.symbol import SourceType
-# from docking.widgets import OptionDialog
+from docking.widgets import OptionDialog
 
-CYCLO_MAP={}
+CYCLO_MAP = {}
+CCs = []
 cyclomaticComplexity = CyclomaticComplexity();
 
 def recurse_cyclo(func, visited = set()):
@@ -36,12 +37,18 @@ def recurse_cyclo(func, visited = set()):
 
 func = getFirstFunction()
 
-#userDialog=OptionDialog.showOptionDialog(None, "Rabbit Hole", "Hello Alice! \nHow do you want your numbers served?", "Part of function name", "Comment")
+userDialog=OptionDialog.showOptionDialog(None, "Rabbit Hole", "Hello Alice! \nHow do you want your functions renamed?", "Yes", "No")
 
-#if userDialog == 0:
-#    exit()
+if userDialog == 0:
+    exit()
 
 while func is not None:
     cc = recurse_cyclo(func)
-    func.setName("%s_cc%d" % (func.getName(), cc), SourceType.USER_DEFINED)
+    CCs.append(cc)
+    if userDialog == 1:
+        func.setName("%s_cc%d" % (func.getName(), cc), SourceType.USER_DEFINED)
     func=getFunctionAfter(func)
+
+print("Rabbit Hole statistics:")
+print("Average CC: %f " % (sum(CCs)/len(CCs)))
+print("Median CC: %d" % (CCs[int(len(CCs)/2)]))
