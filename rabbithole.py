@@ -37,7 +37,7 @@ def recurse_cyclo(func, visited = set()):
 
 func = getFirstFunction()
 
-userDialog=OptionDialog.showOptionDialog(None, "Rabbit Hole", "Hello Alice! \nHow do you want your functions renamed?", "Yes", "No")
+userDialog=OptionDialog.showOptionDialog(None, "Rabbit Hole", "Hello Alice! \nDo you want your functions renamed?", "Yes", "No")
 
 if userDialog == 0:
     exit()
