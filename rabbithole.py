@@ -46,7 +46,7 @@ class RabbitHoleCCColumn(ColumnDisplay):
         return "Cumulative Complexity"  
 
     def getColumnClass(self):
-        return str
+        return int
 
     def compare(self, r1, r2):
         c1 = r1.getCycloComplexity()
