@@ -10,7 +10,6 @@ from ghidra.util.task import TaskMonitor
 from ghidra.program.model.symbol import SourceType
 from docking.widgets import OptionDialog
 from ghidra.app.tablechooser import TableChooserExecutor, AddressableRowObject, ColumnDisplay
-import time
 
 CYCLO_MAP = {}
 CCs = []
@@ -120,8 +119,3 @@ tableDialog.show()
 print("Rabbit Hole statistics:")
 print("Average CC: %f " % (sum(CCs)/len(CCs)))
 print("Median CC: %d" % (CCs[int(len(CCs)/2)]))
-
-
-while not tableDialog.isBusy():
-    time.sleep(1.0)
-
