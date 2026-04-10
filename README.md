@@ -3,6 +3,10 @@ Rabbit Hole - Cumulative Cyclomatic Complexity for Ghidra
 
 This script calculates the sum of the cyclomatic complexities of functions reachable from any function. Calculated results are appended to function names as `_cc%d`.
 
+<p align="center">
+  <img src="img/rabbithole_small.png" />
+</p>
+
 Presenting results
 ------------------
 
@@ -12,6 +16,6 @@ That being said representing this information as comments may be desirable. If y
 
 Results are also presented to the user as a simple table, that can be sorted, filtered and exported. 
 
-![Rabbit Hole logo](img/rabbithole_small.png)
 
-<small>Logo by [jasminecarter.bsky.social](https://bsky.app/profile/jasminecarter.bsky.social)</small>
+
+*Logo by [jasminecarter.bsky.social](https://bsky.app/profile/jasminecarter.bsky.social)*
