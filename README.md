@@ -11,3 +11,7 @@ Recently I've been becoming a believer in storing meta information in names so i
 That being said representing this information as comments may be desirable. If you want this feature, please use the [issue tracker](https://github.com/v-p-b/rabbithole/issues/1)!
 
 Results are also presented to the user as a simple table, that can be sorted, filtered and exported. 
+
+![Rabbit Hole logo](img/rabbithole.png)
+
+<small>Logo by [jasminecarter.bsky.social](https://bsky.app/profile/jasminecarter.bsky.social)</small>
