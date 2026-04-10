@@ -12,6 +12,6 @@ That being said representing this information as comments may be desirable. If y
 
 Results are also presented to the user as a simple table, that can be sorted, filtered and exported. 
 
-![Rabbit Hole logo](img/rabbithole.png)
+![Rabbit Hole logo](img/rabbithole_small.png)
 
 <small>Logo by [jasminecarter.bsky.social](https://bsky.app/profile/jasminecarter.bsky.social)</small>
