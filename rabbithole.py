@@ -46,7 +46,12 @@ class RabbitHoleRow():
 
     @JOverride
     def getName(self):
-        return self.function.getName()
+        ns = self.function.getParentNamespace();
+        ret = ""
+        if ns is not None:
+            return ns.getName(True)+"::"+self.function.getName()
+        else:
+            return self.function.getName()
 
 @JImplements(ColumnDisplay)
 class RabbitHoleCCColumn():
